@@ -2,9 +2,18 @@
 
 ## Core Requirements
 
-- Initial build: image is static on the page
+- Initial build: animal cell image will be statically rendered
 
-- The user can update and save the title
+- The user can mark the image with icons using drag-and-drop
+
+  - Location of each positioned marker is saved between page reloads
+  - Icons can be removed from the image
+
+- Labels are available and can be dragged-and-dropped onto the image area
+
+  - Labels should "snap" onto icons already positioned on the image
+
+- User can check their performance after adding the correct, corresponding label to each positioned icon
 
 ### Icon Markers
 
