@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#content-container {
+  display: grid;
+  grid-template-rows: [image-start icon-start] 27% [icon-end label-start] 27.273% [image-end label-end notes-start] 560px [notes-end];
+  grid-template-columns: [image-start notes-start] 71.212% [image-end icon-start] 28.03% [icon-end notes-end];
+  grid-gap: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+  top: 64px;
+  left: 70px;
+  right: 0;
+  bottom: 0;
+}

@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Label Learn App
 
-## Available Scripts
+## Core Requirements
 
-In the project directory, you can run:
+- Initial build: image is static on the page
 
-### `npm start`
+- The user can update and save the title
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Icon Markers
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- The user can drag-and-drop an icon marker onto the image field
 
-### `npm test`
+- The icon marker's position on the image is saved on the image field
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The icon marker can be moved once it's placed in the image field
 
-### `npm run build`
+- The icon marker can be returned to the icon box
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Label Markers
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- The user can add new labels to the label box
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- If the user attempts to add a label with the same name as an existing label, the user is notified and prompted to provide a unique name
 
-### `npm run eject`
+- The user can remove labels from the collection
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The user can drag-and-drop labels from the label box onto the image field, updating the collection of rendered labels in the box
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The user can move labels on the image field once the label has been placed
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- The user can return an image back into the image box, updating the rendered collection
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- The label marker locations can be saved on the image once the user is satisfied with their placement
 
-## Learn More
+### Exam Mode
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Once saved, loading the page in exam mode converts all the positioned labels into icons
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The user can drag and drop labels from the label box onto the image where icons are present
 
-### Code Splitting
+- The user can reposition labels via drag and drop once they are placed on the image
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- The user can return labels to the label box after they're placed
 
-### Analyzing the Bundle Size
+- Once the user has labeled as many icons as they can recall from memory, they can click finish and are scored for all labels which were correctly matched to their stored location.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  - This means the original placement of labels must store a location variable in the code and that value has to be validated when the game is scored for the user to receive a point for the correct answer
+  - If the positioned label can't be validated during the scoring phase, the user loses a point
+  - The area where labels may be dropped onto an icon for placement should be large enough so they fasten to the icon, covering it within a reasonable space on or surrounding that specific icon
 
-### Making a Progressive Web App
+- A timer is started once the user begins exam mode
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- The user's score and time is reported to them in a modal once the game is finished and scored
 
-### Advanced Configuration
+- The modal prompts the user with an option to try again or close the modal
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- At any time during exam mode, the user can reset the image field
+  - Resetting the exam returns all currently positioned labels back to the label box
+  - Resetting the exam restores the timer to 00:00
+  - Resetting the exam ends exam mode

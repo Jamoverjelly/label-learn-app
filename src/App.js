@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import ImageContainer from './components/ImageContainer/ImageContainer';
+import LeftPane from './components/LeftPane/LeftPane';
+import Menubar from './components/MenubarContainer/Menubar';
+import IconsContainer from './components/IconsContainer/IconsContainer';
+import LabelsContainer from './components/LabelsContainer/LabelsContainer';
+import NotesContainer from './components/NotesContainer/NotesContainer';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Menubar/>
+        <LeftPane/>
+        <div id="content-container">
+          <ImageContainer id="image-box"/>
+          <IconsContainer id="icons-box"/>
+          <LabelsContainer id="labels-box"/>
+          <NotesContainer id="notes-box"/>
+        </div>
       </div>
     );
   }

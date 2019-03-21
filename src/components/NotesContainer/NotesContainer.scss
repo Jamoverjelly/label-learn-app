@@ -1,0 +1,22 @@
+div.notes-container {
+  grid-row-start: notes-start;
+  grid-column-start: notes-start;
+  grid-column-end: notes-end;
+}
+
+.notes-container {
+  padding: 20px 10px 10px 20px;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 440px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  .title {
+    font-size: 2em;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
