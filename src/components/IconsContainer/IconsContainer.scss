@@ -20,4 +20,14 @@ div.icons-container {
     margin-top: 0;
     margin-bottom: 10px;
   }
+
+  .icons-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .icon:hover {
+      cursor: pointer;
+    }
+  }
 }

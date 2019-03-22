@@ -2,7 +2,7 @@
 
 ## Core Requirements
 
-- Initial build: animal cell image will be statically rendered
+- Initial build: an image of an animal cell will be statically rendered into the application's image-area
 
 - The user can mark the image with icons using drag-and-drop
 
@@ -24,6 +24,19 @@
 - The icon marker can be moved once it's placed in the image field
 
 - The icon marker can be returned to the icon box
+
+#### Implementing Drag-and-drop Functionality
+
+At a high-level, the steps to successfully achieving drag-and-drop functionality are
+
+1. Make an element draggable (in this case, an icon's containing `div`) by adding the "draggable" attribute
+2. Make an area droppable by implementing the "dragover" event
+3. Capture the drag data by implementing the "dragstart" event
+4. Capture the drop by implementing the "drop" event
+5. Implement the "drag" event that is fired as the element is being dragged
+6. Store the intermediate data in the `dataTransfer` object
+
+This list of steps was described in a Medium article by Rajesh Pillai: [React.js: implement the drag and drop feature without using external libraries](https://medium.freecodecamp.org/reactjs-implement-drag-and-drop-feature-without-using-external-libraries-ad8994429f1a)
 
 ### Label Markers
 
