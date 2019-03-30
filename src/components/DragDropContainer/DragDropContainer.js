@@ -1,6 +1,6 @@
 import React from "react";
 import "./DragDropContainer.scss";
-import ImageContainer from "./ImageContainer/ImageContainer";
+import LabelLearnApp from "./LabelLearnApp";
 import IconsContainer from "./IconsContainer/IconsContainer";
 import LabelsContainer from "./LabelsContainer/LabelsContainer";
 import { DragDropContextProvider } from "react-dnd";
@@ -11,7 +11,7 @@ const DragDropContainer = props => {
     <div id="drag-drop-wrapper">
       <DragDropContextProvider backend={HTML5Backend}>
         <div className="image-box">
-          <ImageContainer />
+          <LabelLearnApp />
         </div>
         <div className="icons-box">
           <IconsContainer />
