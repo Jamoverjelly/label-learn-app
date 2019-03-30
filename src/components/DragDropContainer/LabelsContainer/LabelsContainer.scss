@@ -1,12 +1,6 @@
-div.labels-container {
-  grid-row-start: label-start;
-  grid-row-end: label-end;
-  grid-column-start: icon-start;
-  grid-column-end: icon-end;
-}
-
 .labels-container {
   padding: 20px 10px 10px 20px;
+  height: 100%;
   max-width: 100%;
   max-height: 274px;
   background-color: #fff;

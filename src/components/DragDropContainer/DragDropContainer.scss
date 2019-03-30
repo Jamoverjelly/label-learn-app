@@ -1,0 +1,28 @@
+#drag-drop-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: [image-start icon-start] 50% [icon-end label-start] 50% [image-end label-end];
+  grid-template-columns: [image-start] 71.212% [image-end icon-start] 28.03% [icon-end];
+  grid-gap: 10px;
+
+  div.image-box {
+    grid-row-start: image-start;
+    grid-row-end: image-end;
+    grid-column-start: image-start;
+    grid-column-end: image-end;
+  }
+
+  div.icons-box {
+    grid-row-start: icon-start;
+    grid-row-end: icon-end;
+    grid-column-start: icon-start;
+    grid-column-end: icon-end;
+  }
+
+  div.labels-box {
+    grid-row-start: label-start;
+    grid-row-end: label-end;
+    grid-column-start: icon-start;
+    grid-column-end: icon-end;
+  }
+}
