@@ -7,7 +7,7 @@ const ImageContainer = props => {
     <div className="image-container">
       <h2 className="title">The Cell</h2>
       <div className="image-area">
-        <ImageGrid />
+        <ImageGrid iconPosition={props.iconPosition} />
       </div>
     </div>
   );

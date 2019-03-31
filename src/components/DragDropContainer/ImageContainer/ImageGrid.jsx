@@ -19,8 +19,8 @@ const cellStyle = { width: "0.8%", height: "1.5%" };
  */
 const ImageGrid = ({ iconPosition: [iconX, iconY] }) => {
   function renderCell(i) {
-    const x = i % 750;
-    const y = Math.floor(i / 750);
+    const x = i % 126;
+    const y = Math.floor(i / 48);
     return (
       <div key={i} style={cellStyle}>
         <ImageGridCell x={x} y={y}>
